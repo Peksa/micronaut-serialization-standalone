@@ -1,0 +1,25 @@
+plugins {
+	id 'java'
+	id 'application'
+}
+
+group = 'net.peksa.micronaut-serialization-standalone'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	annotationProcessor 'io.micronaut.serde:micronaut-serde-processor:2.2.4'
+	implementation 'io.micronaut.serde:micronaut-serde-jackson:2.2.4'
+}
+
+application {
+	// Define the main class for the application
+	mainClassName = 'net.peksa.micronaut.Main'
+}
